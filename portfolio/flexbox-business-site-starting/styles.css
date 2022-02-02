@@ -19,11 +19,19 @@ li {
   padding: 40px;
 }
 
-img {
-  width: 100%;
-}
-
 #logo {
   width: 75%;
   
+}
+
+#books {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+#gcl_logo_img {
+  width: 100%;
 }
