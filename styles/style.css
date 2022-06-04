@@ -7,9 +7,22 @@ h1 {
 	font-size: 4rem;
 }
 
+h2 {
+	font-size: 3rem;
+}
+
+nav ul {
+	/*display: flex;*/
+	/*//justify-content: space-between;*/
+	/*flex-wrap: wrap;*/
+	list-style: none;
+	font-size: 2rem;
+	padding-inline-start: 0;
+}
+
 .main-nav {
 	grid-area: main-nav;
-	background-color: blue;
+	background-color: orange;
 }
 
 .header {
@@ -19,17 +32,17 @@ h1 {
 
 .about {
 	grid-area: about;
-	background-color: orange;
+	background-color: yellow;
 }
 
 .projects {
 	grid-area: projects;
-	background-color: yellow;
+	background-color: green;
 }
 
 .skills {
 	grid-area: skills;
-	background-color: green;
+	background-color: blue;
 }
 
 .footer {
@@ -45,13 +58,35 @@ h1 {
 											 "projects"
 											 "skills"
 											 "footer";
+	gap: 10px;
 }
 
-nav ul {
-	/*display: flex;*/
-	/*//justify-content: space-between;*/
-	/*flex-wrap: wrap;*/
-	list-style: none;
-	font-size: 2rem;
+.box {
+	border-radius: 5px;
 }
 
+@media screen and (min-width: 500px) {
+	.wrapper {
+		grid-template-columns: 20% auto;
+		grid-template-areas: "header header"
+												 "main-nav main-nav"
+												 "about projects"
+												 "skills projects"
+												 "footer footer";
+	}
+
+	nav ul {
+		display: flex;
+		justify-content: space-around;
+	}
+}
+
+@media screen and (min-width: 600px) {
+	.wrapper {
+		grid-template-columns: 240px auto 120px;
+		grid-template-areas: "header header header"
+												 "main-nav main-nav main-nav"
+												 "about projects skills"
+												 "footer footer footer";
+	}
+}
