@@ -1,31 +1,22 @@
 // JavaScript Document
-var myImage = document.querySelector('img');
+const about = document.getElementById('about');
+const projects = document.getElementById('projects');
 
-myImage.onclick = function() {
-    var mySrc = myImage.getAttribute('src');
-    if(mySrc === 'images/hot-plate-1.jpg') {
-      myImage.setAttribute ('src','images/nate-tova-1.jpg');
-    } else {
-      myImage.setAttribute ('src','images/hot-plate-1.jpg');
-    }
-}
-var myButton = document.querySelector('button');
-var myHeading = document.querySelector('h1');
+const paragraph = document.createElement('p');
+const paragraph2 = document.createElement('p');
 
-function setUserName() {
-  var myName = prompt('Please enter your name.');
-  localStorage.setItem('name', myName);
-  myHeading.textContent = 'Mozilla is cool, ' + myName;
+
+about.onclick = function() {
+  about.style.backgroundColor = 'red';
+  let aboutMe = document.getElementsByClassName('about-me');
+  for (let i = 0; i < aboutMe.length; i++) {
+    aboutMe[i].style.display = "inline-block";
+  }
 }
 
-if(!localStorage.getItem('name')) {
-  setUserName();
-} else {
-  var storedName = localStorage.getItem('name');
-  myHeading.textContent = 'Mozilla is cool, ' + storedName;
+projects.onclick = function() {
+  projects.style.backgroundColor = 'blue';
+  paragraph2.id = 'projects-p';
+  paragraph2.innerHTML = 'This is another test.';
+  projects.appendChild(paragraph2);
 }
-
-myButton.onclick = function() {
-  setUserName();
-}
-

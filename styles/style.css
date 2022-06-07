@@ -11,6 +11,10 @@ h2 {
 	font-size: 3rem;
 }
 
+p {
+	font-size: 1.5rem;
+}
+
 nav ul {
 	/*display: flex;*/
 	/*//justify-content: space-between;*/
@@ -33,6 +37,10 @@ nav ul {
 .about {
 	grid-area: about;
 	background-color: yellow;
+}
+
+.about-me {
+	display: none;
 }
 
 .projects {
@@ -67,7 +75,7 @@ nav ul {
 
 @media screen and (min-width: 500px) {
 	.wrapper {
-		grid-template-columns: 20% auto;
+		grid-template-columns: 1fr auto;
 		grid-template-areas: "header header"
 												 "main-nav main-nav"
 												 "about projects"
@@ -77,13 +85,13 @@ nav ul {
 
 	nav ul {
 		display: flex;
-		justify-content: space-around;
+		justify-content: space-between;
 	}
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700px) {
 	.wrapper {
-		grid-template-columns: 240px auto 120px;
+		grid-template-columns: 1fr 2fr 1fr;
 		grid-template-areas: "header header header"
 												 "main-nav main-nav main-nav"
 												 "about projects skills"
