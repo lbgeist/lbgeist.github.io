@@ -1,24 +1,23 @@
 // JavaScript Document
+
 const about = document.getElementById('about');
 const aboutArrow = document.getElementById('about-side-arrow');
+const aboutMe = document.getElementsByClassName('about-me');
 const projects = document.getElementById('projects');
 
 const paragraph = document.createElement('p');
 const paragraph2 = document.createElement('p');
 
-
-about.onclick = function() {
-  if(aboutArrow.style.display === 'none') {
-    aboutArrow.style.display = 'inline-block';
-    let aboutMe = document.getElementsByClassName('about-me');
-    for (let i = 0; i < aboutMe.length; i++) {
-      aboutMe[i].style.display = "none";
+const arrowChange = (arrow, hiddenClass) => {
+  if(arrow.style.display === 'none') {
+    arrow.style.display = 'inline-block';
+    for (let i = 0; i < hiddenClass.length; i++) {
+      hiddenClass[i].style.display = "none";
     }
   } else {
-    aboutArrow.style.display = "none";
-    let aboutMe = document.getElementsByClassName('about-me');
-    for (let i = 0; i < aboutMe.length; i++) {
-      aboutMe[i].style.display = "inline-block";
+    arrow.style.display = "none";
+    for (let i = 0; i < hiddenClass.length; i++) {
+      hiddenClass[i].style.display = "inline-block";
     }
   } 
 }
