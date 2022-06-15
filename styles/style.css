@@ -13,6 +13,7 @@ h2 {
 
 h3 {
 	font-size: 1.75rem;
+	display: block;
 }
 
 p {
@@ -43,7 +44,10 @@ nav ul {
 	background-color: yellow;
 }
 
-.about-me {
+.about-me, 
+.proj-1-title-open, 
+.proj-2-title-open,
+.proj-3-title-open {
 	display: none;
 }
 
