@@ -51,6 +51,12 @@ nav ul {
 	display: none;
 }
 
+#proj-1-title, #proj-2-title, #proj-3-title, 
+.proj-1-title-open, .proj-2-title-open, .proj-3-title-open,
+.about-me, #about-side-arrow {
+	cursor: pointer;
+}
+
 .projects {
 	grid-area: projects;
 	background-color: green;
