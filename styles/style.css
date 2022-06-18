@@ -37,6 +37,7 @@ nav ul {
 .header {
 	grid-area: header;
 	background-color: red;
+	color: white;
 }
 
 .about {
@@ -60,16 +61,19 @@ nav ul {
 .projects {
 	grid-area: projects;
 	background-color: green;
+	color: white;
 }
 
 .skills {
 	grid-area: skills;
 	background-color: blue;
+	color: white;
 }
 
 .footer {
 	grid-area: footer;
 	background-color: purple;
+	color: white;
 }
 
 .wrapper {
@@ -89,7 +93,7 @@ nav ul {
 
 @media screen and (min-width: 500px) {
 	.wrapper {
-		grid-template-columns: 1fr auto;
+		grid-template-columns: 1fr 1fr;
 		grid-template-areas: "header header"
 												 "main-nav main-nav"
 												 "about projects"
