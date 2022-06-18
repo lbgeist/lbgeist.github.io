@@ -20,6 +20,14 @@ p {
 	font-size: 1.5rem;
 }
 
+img {
+	width: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
 nav ul {
 	/*display: flex;*/
 	/*//justify-content: space-between;*/
@@ -89,6 +97,7 @@ nav ul {
 
 .box {
 	border-radius: 5px;
+	padding: 10px;
 }
 
 @media screen and (min-width: 500px) {
